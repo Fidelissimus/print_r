@@ -21,7 +21,7 @@ class UserConfig:
     def __init__(self, username, is_admin):
         self.username = username
         self.is_admin = is_admin
-        self._private = "secret_key" # Should be printed by print_r vars() but not pprint
+        self._private = "secret_key"
 
 nested_data = [
     {
