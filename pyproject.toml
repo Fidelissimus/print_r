@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "python-print-r"
+dynamic = ["version"]
+description = "A safe, colorful, PHP print_r-style formatter for Python values"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{ name = "Fidelissimus" }]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development :: Debuggers",
+    "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/Fidelissimus/print_r"
+Repository = "https://github.com/Fidelissimus/print_r"
+Issues = "https://github.com/Fidelissimus/print_r/issues"
+
+[tool.setuptools.dynamic]
+version = { attr = "print_r.__version__" }
+
+[tool.setuptools.packages.find]
+include = ["print_r*"]
+
+[tool.setuptools.package-data]
+print_r = ["py.typed"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "UP", "B", "SIM"]
